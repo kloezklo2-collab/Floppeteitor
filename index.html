@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLOPPETEITOR - Control de Mando</title>
+    <style>
+        /* Estilo tipo terminal de computadora antigua */
+        body {
+            background-color: #0a0a0a;
+            color: #39ff14;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Courier New', Courier, monospace;
+            overflow: hidden;
+        }
+
+        h1 {
+            letter-spacing: 5px;
+            text-shadow: 0 0 10px #39ff14;
+            margin-bottom: 20px;
+        }
+
+        .contenedor-floppa {
+            position: relative;
+            padding: 10px;
+            border: 2px solid #39ff14;
+            box-shadow: 0 0 20px rgba(57, 255, 20, 0.5);
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        img {
+            max-width: 300px;
+            display: block;
+            /* Filtro por si quieres que se vea un poco más retro */
+            filter: contrast(1.1) brightness(1.1);
+        }
+
+        .status {
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+
+        /* Efecto de parpadeo para el cursor */
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            background: #39ff14;
+            animation: parpadeo 1s infinite;
+            vertical-align: middle;
+        }
+
+        @keyframes parpadeo {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>[ FLOPPETEITOR V1.0 ]</h1>
+
+    <div class="contenedor-floppa">
+        <img src="Floppa-PNG-Pic.png" alt="Big Floppa Principal">
+    </div>
+
+    <div class="status">
+        > SISTEMA CARACAL: <span style="color: white;">ONLINE</span>
+        <br>
+        > MODO: <span style="color: white;">DOMINACIÓN MUNDIAL</span>
+        <span class="cursor"></span>
+    </div>
+
+</body>
+</html>
